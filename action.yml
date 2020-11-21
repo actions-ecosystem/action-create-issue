@@ -1,0 +1,32 @@
+name: Actions Ecosystem Action Create Issue
+description: Create an issue
+author: Actions Ecosystem
+inputs:
+  github_token:
+    description: A GitHub token.
+    required: true
+  title:
+    description: The title of the created issue.
+    required: true
+  body:
+    description: The body of the created issue.
+    required: false
+  repo:
+    description: The owner and repository name. e.g.) Codertocat/Hello-World
+    required: false
+    default: ${{ github.repository }}
+  labels:
+    description: The labels which are added to the created issue when it's created. Must be separated with line breaks if there're multiple labels.
+    required: false
+  milestone:
+    description: The number of the milestone to which the created issue is added when it's created.
+    required: false
+  assignees:
+    description: The assignees which are assigned to the created issue when it's created. Must be separated with line breaks if there're multiple assignees.
+    required: false
+runs:
+  using: node12
+  main: dist/index.js
+branding:
+  icon: file-text
+  color: green
