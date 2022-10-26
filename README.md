@@ -36,7 +36,7 @@ jobs:
       - name: Get today's date
         id: date
         run: |
-          echo "::set-output name=today::$(date "+%Y/%m/%d")"
+          echo "today=$(date "+%Y/%m/%d")" >> "$GITHUB_OUTPUT"
 
       - name: Create an issue
         uses: actions-ecosystem/action-create-issue@v1
