@@ -25,7 +25,7 @@ inputs:
     description: The assignees which are assigned to the created issue when it's created. Must be separated with line breaks if there're multiple assignees.
     required: false
 runs:
-  using: node12
+  using: node16
   main: dist/index.js
 branding:
   icon: file-text
